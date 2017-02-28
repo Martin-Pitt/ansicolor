@@ -1,6 +1,6 @@
 {
   "name": "ansicolour",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Fork of ansicolor with CSS closer to that used in devtools and a few fixes",
   "main": "ansicolour.js",
   "scripts": {},
@@ -11,9 +11,9 @@
   "keywords": [
     "ansi",
     "color",
-	"colour",
-	"ansi color",
-	"ansi-color",
+    "colour",
+    "ansi color",
+    "ansi-color",
     "ansi colour",
     "ansi-colour",
     "ansicolour",
