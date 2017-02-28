@@ -1,11 +1,9 @@
 {
-  "name": "ansicolor",
+  "name": "ansicolour",
   "version": "1.0.4",
-  "description": "The final solution to the ANSI color/style management. Works in browsers!",
-  "main": "ansicolor.js",
-  "scripts": {
-    "test": "supervisor -n exit -x mocha -- --reporter spec"
-  },
+  "description": "Fork of ansicolor with CSS closer to that used in devtools and a few fixes",
+  "main": "ansicolour.js",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/xpl/ansicolor.git"
@@ -13,9 +11,12 @@
   "keywords": [
     "ansi",
     "color",
-    "ansi color",
-    "ansi-color",
-    "ansicolor",
+	"colour",
+	"ansi color",
+	"ansi-color",
+    "ansi colour",
+    "ansi-colour",
+    "ansicolour",
     "ansi styles",
     "console",
     "logging",
@@ -23,21 +24,13 @@
     "developer tools",
     "devtools",
     "webinspector",
-    "color logging",
-    "tty colors",
+    "colour logging",
+    "tty colours",
     "tty"
   ],
-  "author": "Vitaly Gordon <rocket.mind@gmail.com>",
+  "author": "Nexii Malthus <martin.r.pitt+ansicolour@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/xpl/ansicolor/issues"
-  },
-  "homepage": "https://github.com/xpl/ansicolor",
   "dependencies": {
     "es7-object-polyfill": "^0.0.1"
-  },
-  "devDependencies": {
-    "mocha": "^2.4.5",
-    "supervisor": "^0.11.0"
   }
 }

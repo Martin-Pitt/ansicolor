@@ -7,23 +7,23 @@ const
     colorCodes = ['black', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white', '', 'default'],
     styleCodes = ['', 'bright', 'dim', 'italic', 'underline', '', '', 'inverse'],
 
-    brightCssColors = { black:   [0,     0,   0],
-                        red:     [255,  51,   0],
-                        green:   [51,  204,  51],
-                        yellow:  [255, 153,  51],
-                        blue:    [26,  140, 255],
-                        magenta: [255,   0, 255],
-                        cyan:    [0,   204, 255],
-                        white:   [255, 255, 255]    },
+    brightCssColors = { black: [ 32,  32,  32],
+                          red: [200,   0,   0],
+                        green: [0,   160,   0],
+                       yellow: [204, 190,   0],
+                         blue: [ 50,   0, 207],
+                      magenta: [170,  13, 145],
+                         cyan: [  9, 173, 185],
+                        white: [255, 255, 255] },
 
-    cssColors = {   black:   [0,     0,   0],
-                    red:     [204,   0,   0],
-                    green:   [0,   204,   0],
-                    yellow:  [204, 102,   0],
-                    blue:    [0,     0, 255],
-                    magenta: [204,   0, 204],
-                    cyan:    [0,   153, 255],
-                    white:   [255, 255, 255]    },
+    cssColors = { black: [  0,   0,   0],
+                    red: [196,  26,  22],
+                  green: [  0, 116,   0],
+                 yellow: [179, 167,   0],
+                   blue: [ 28,   0, 207],
+                magenta: [136,  18, 128],
+                   cyan: [  7, 144, 154],
+                  white: [230, 230, 230]    },
 
     types = {   0:  'style',
                 2:  'unstyle',
@@ -58,7 +58,7 @@ class Color {
         const prop = (color.background ? 'background:' : 'color:'),
               rgb  = ((brightness === Code.bright) ? brightCssColors : cssColors)[color.name]
 
-        return rgb ? (prop + 'rgba(' + [...rgb, (brightness === Code.dim) ? 0.5 : 1].join (',') + ');') : ''
+        return rgb ? (prop + 'rgba(' + [...rgb, (brightness === Code.dim) ? 0.5 : 1].join (',') + ');') : (brightness === Code.dim ? 'color:rgba(0,0,0,0.5);text-shadow:rgba(255,255,255,0.5) 0 0;' : '');
     }
 }
 
@@ -230,5 +230,3 @@ styleCodes.forEach ((k, i) => {
         Colors[k] = wrap (i, ((k === 'bright') || (k === 'dim')) ? Code.noBrightness : (20 + i)) } })
 
 module.exports = Colors
-
-
